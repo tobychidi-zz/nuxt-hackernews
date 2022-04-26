@@ -29,5 +29,4 @@
 const route = useRoute()
 const storyID = route.params.id
 const story = await useGetStory(storyID)
-console.log(story)
 </script>

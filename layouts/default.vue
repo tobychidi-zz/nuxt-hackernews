@@ -1,5 +1,4 @@
 <template>
-
    <Head>
       <Meta charset="UTF-8" />
       <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
