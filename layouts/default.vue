@@ -5,7 +5,6 @@
       <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <Meta name="description" content="Nuxt Hackernews" />
       <Title>NuxtJs - Hacker News</Title>
-      <Link ref="icon" type="image/x-icon" href="/favicon.png" />
    </Head>
    <header class="header">
       <nav class="inner">
