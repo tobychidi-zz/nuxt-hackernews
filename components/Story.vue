@@ -3,7 +3,7 @@
       <span class="score">{{ story.points }}</span>
       <span class="title">
          <template v-if="story.url && !story.url.startsWith(' item?id=')">
-            <a href="{story.url}" target="_blank" rel="noreferrer">
+            <a :href="story.url" target="_blank" rel="noreferrer">
                {{ story.title }}
             </a>
             <span class="host">{{story.domain}}</span>

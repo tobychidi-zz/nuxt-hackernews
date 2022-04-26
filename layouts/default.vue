@@ -1,9 +1,11 @@
 <template>
+
    <Head>
       <Meta charset="UTF-8" />
       <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <Meta name="description" content="Nuxt Hackernews" />
       <Title>NuxtJs - Hacker News</Title>
+      <Link ref="icon" type="image/x-icon" href="/favicon.png" />
    </Head>
    <header class="header">
       <nav class="inner">
@@ -22,7 +24,7 @@
          <a href="/job">
             <strong>Jobs</strong>
          </a>
-         <a class="github" href="https://github.com/withastro/astro" target="_blank" rel="noreferrer">
+         <a class="github" href="https://github.com/nuxt/framework" target="_blank" rel="noreferrer">
             Built with Nuxt JS
          </a>
       </nav>
@@ -31,5 +33,5 @@
 </template>
 
 <style>
-@import "@/assets/css/global.css"
+@import "@/assets/css/global.css";
 </style>
