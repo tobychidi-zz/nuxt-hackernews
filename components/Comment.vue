@@ -1,7 +1,7 @@
 <template>
    <li class="comment">
       <div class="by">
-         <a :href="`/users/${comment.user}`">{{ comment.user }}</a>
+         <NuxtLink :to="`/users/${comment.user}`">{{ comment.user }}</NuxtLink>
          {{ comment.time_ago }}
       </div>
       <div class="text" v-html="comment.content" />

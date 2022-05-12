@@ -6,23 +6,24 @@
       <Meta name="description" content="Nuxt Hackernews" />
       <Title>NuxtJs - Hacker News</Title>
    </Head>
+   <NuxtLoading ref="loading" />
    <header class="header">
       <nav class="inner">
-         <a href="/">
+         <NuxtLink to="/">
             <strong>HN</strong>
-         </a>
-         <a href="/new">
+         </NuxtLink>
+         <NuxtLink to="/new">
             <strong>New</strong>
-         </a>
-         <a href="/show">
+         </NuxtLink>
+         <NuxtLink to="/show">
             <strong>Show</strong>
-         </a>
-         <a href="/ask">
+         </NuxtLink>
+         <NuxtLink to="/ask">
             <strong>Ask</strong>
-         </a>
-         <a href="/job">
+         </NuxtLink>
+         <NuxtLink to="/job">
             <strong>Jobs</strong>
-         </a>
+         </NuxtLink>
          <a class="github" href="https://github.com/nuxt/framework" target="_blank" rel="noreferrer">
             Built with Nuxt JS
          </a>
@@ -30,6 +31,21 @@
    </header>
    <slot></slot>
 </template>
+
+<script lang="ts" setup>
+const loading = ref(null)
+
+const nuxtApp = useNuxtApp()
+
+nuxtApp.hook("page:start", () => {
+   loading.value.start()
+})
+
+nuxtApp.hook("page:finish", () => {
+   loading.value.finish()
+   window.scrollTo(0, 0)
+})
+</script>
 
 <style>
 @import "@/assets/css/global.css";

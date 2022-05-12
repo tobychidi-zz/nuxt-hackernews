@@ -1,13 +1,13 @@
 <template>
    <div v-if="story" class="item-view">
       <div class="item-view-header">
-         <a :href="story.url" target="_blank">
+         <NuxtLink :to="story.url" target="_blank">
             <h1>{{ story.title }}</h1>
-         </a>
+         </NuxtLink>
          <span v-if="story.domain" class="host">{{ story.domain }}</span>
          <p class="meta">
             {{ story.points }} points | by{{ " " }}
-            <a :href="`/users/${story.user}`">{{ story.user }}</a>{{ " " }}
+            <NuxtLink :to="`/users/${story.user}`">{{ story.user }}</NuxtLink>{{ " " }}
             {{ story.time_ago }} ago
          </p>
       </div>
@@ -27,7 +27,6 @@
 
 <script lang="ts" setup>
 const route = useRoute()
-const storyID = route.params.id
-const story = await useGetStory(storyID)
-console.log(story)
+const storyID = computed(() => route.params.id)
+const story = await useGetStory(storyID.value)
 </script>

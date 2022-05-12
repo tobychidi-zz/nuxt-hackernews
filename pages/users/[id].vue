@@ -19,6 +19,6 @@
 
 <script lang="ts" setup>
 const route = useRoute();
-const userID = route.params.id;
-const user: any = await useGetUser(userID);
+const userID = computed(()=> route.params.id);
+const user: any = await useGetUser(userID.value);
 </script>

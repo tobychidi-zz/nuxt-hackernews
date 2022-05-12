@@ -3,26 +3,26 @@
       <span class="score">{{ story.points }}</span>
       <span class="title">
          <template v-if="story.url && !story.url.startsWith(' item?id=')">
-            <a :href="story.url" target="_blank" rel="noreferrer">
+            <NuxtLink :to="story.url" target="_blank" rel="noreferrer">
                {{ story.title }}
-            </a>
-            <span class="host">{{story.domain}}</span>
+            </NuxtLink>
+            <span class="host">{{ story.domain }}</span>
          </template>
-         <a v-else :href="`/item/${story.id}`">{{ story.title }}</a>
+         <NuxtLink v-else :to="`/item/${story.id}`">{{ story.title }}</NuxtLink>
       </span>
       <br />
       <span class="meta">
          <template v-if="story.type !== 'job'">
-            by <a :href="`/users/${story.user}`">{{ story.user }}</a>{{ story.time_ago }}
-            <a :href="`/stories/${story.id}`">
+            by <NuxtLink :to="`/users/${story.user}`">{{ story.user }}</NuxtLink>{{ story.time_ago }}
+            <NuxtLink :to="`/stories/${story.id}`">
                {{ story.comments_count ? `${story.comments_count} comments` : "discuss" }}
-            </a>
+            </NuxtLink>
          </template>
 
-         <a v-else :href="`/stories/${story.id}`">{{story.time_ago}}</a>
+         <NuxtLink v-else :to="`/stories/${story.id}`">{{ story.time_ago }}</NuxtLink>
       </span>
 
-      <span v-if="story.type !== 'link'" class="label">{{story.type}}</span>
+      <span v-if="story.type !== 'link'" class="label">{{ story.type }}</span>
    </li>
 </template>
 
@@ -34,4 +34,5 @@ const props = defineProps<{
 // console.log(props.story)
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

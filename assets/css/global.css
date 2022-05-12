@@ -271,3 +271,23 @@ a {
 .user-view .links a {
   text-decoration: underline;
 }
+.nuxt-progress {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 4px;
+  width: 0%;
+  opacity: 1;
+  transition: width 0.1s, opacity 0.4s;
+  background-color: #255461;
+  z-index: 999999;
+}
+
+.nuxt-progress.nuxt-progress-notransition {
+  transition: none;
+}
+
+.nuxt-progress-failed {
+  background-color: #d0144f;
+}
