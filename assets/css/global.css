@@ -13,7 +13,7 @@ a {
   text-decoration: none;
 }
 .header {
-  background-color: #00DC82;
+  background-color: #255461;
   position: fixed;
   z-index: 999;
   height: 55px;
@@ -137,7 +137,7 @@ a {
   line-height: 20px;
 }
 .news-item .score {
-  color: #00DC82;
+  color: #255461;
   font-size: 1.1em;
   font-weight: 700;
   position: absolute;
@@ -159,7 +159,7 @@ a {
 }
 .news-item .host a:hover,
 .news-item .meta a:hover {
-  color: #00DC82;
+  color: #255461;
 }
 .item-view-header {
   background-color: #fff;
@@ -280,7 +280,7 @@ a {
   width: 0%;
   opacity: 1;
   transition: width 0.1s, opacity 0.4s;
-  background-color: #255461;
+  background-color: #00dc82;
   z-index: 999999;
 }
 
