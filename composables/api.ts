@@ -18,7 +18,7 @@ export function useGetUser(id) {
    return get(`https://hacker-news.firebaseio.com/v0/user/${id}.json`);
 }
 export function useGetStories(type, page) {
-   console.log("type", type, "page", page)
+   // console.log("type", type, "page", page)
    const l = mapStories[type];
    if (!l) return [];
    return get(`https://node-hnapi.herokuapp.com/${l}?page=${page}`);

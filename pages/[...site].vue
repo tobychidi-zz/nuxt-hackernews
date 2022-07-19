@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 const route = useRoute();
-console.log(route.params.site)
+// console.log(route.params.site)
 const type = route.params.site[0] ?? "top";
 let pageID = ref("1")
 if (route.query.page) { pageID.value = route.query.page.toString() }
