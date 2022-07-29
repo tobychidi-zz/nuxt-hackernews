@@ -8,8 +8,7 @@
 
          <span>page {{ page }}</span>
          <!-- sometimes the length isn't 30? -->
-         <a v-if="stories.length >= 28" class="page-link" :href="`/${type}?page=${page + 1}`"
-            aria-label="Next Page">
+         <a v-if="stories.length >= 28" class="page-link" :href="`/${type}?page=${page + 1}`" aria-label="Next Page">
             more &gt;
          </a>
          <span v-else class="page-link" aria-hidden="true">more &gt;</span>

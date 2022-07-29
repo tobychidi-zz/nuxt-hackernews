@@ -7,9 +7,15 @@ const mapStories = {
 };
 
 const get = (path) =>
-   fetch(path, {
+   $fetch(path, {
       headers: { "User-Agent": "chrome" },
-   }).then((r) => r.json());
+   });
+// const get = async (path) => {
+//    const { data } = await useFetch(path, {
+//       headers: { "User-Agent": "chrome" }
+//    })
+//    return data.value
+// }
 
 export function useGetStory(id) {
    return get(`https://node-hnapi.herokuapp.com/item/${id}`);
